@@ -1,9 +1,21 @@
 <template>
   <div class="content-list">
-      <ContainerLevel title="A Fazer" :status=0 />
-      <ContainerLevel title="Fazendo" :status=1 />
-      <ContainerLevel title="Aguardando Pendências" :status=2 />
-      <ContainerLevel title="Concluído" :status=3 />
+      <ContainerLevel
+        title="A Fazer"
+        :status=0
+      />
+      <ContainerLevel
+        title="Fazendo"
+        :status=1
+      />
+      <ContainerLevel
+        title="Aguardando Pendências"
+        :status=2
+      />
+      <ContainerLevel
+        title="Concluído"
+        :status=3
+      />
   </div>
 </template>
 

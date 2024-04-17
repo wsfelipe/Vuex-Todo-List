@@ -1,5 +1,5 @@
 <template>
-  <div v-for="card in a" v-bind:key="card.index" class="content-card">
+  <div v-for="card in cards" v-bind:key="card.index" class="content-card">
     <div v-if="card.status == status">
       <div class="card-title">
         <p>{{ card.title }}</p>
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      a: this.$store.getters.cards.filter((c) => c.status==this.status)
+      cards: this.$store.getters.cards.filter((c) => c.status==this.status)
     }
   }
 }

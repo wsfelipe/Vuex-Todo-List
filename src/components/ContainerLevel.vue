@@ -39,4 +39,9 @@ export default {
   padding: 10px;
   color: #ccc;
 }
+.content-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 </style>

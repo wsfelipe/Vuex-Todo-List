@@ -17,14 +17,31 @@ const store = createStore({
         status: 1
       },
       {
+        index: 2,
+        title: 'titulo 5',
+        desc: 'lorem ipsum',
+        status: 1
+      },
+      {
+        index: 2,
+        title: 'titulo 6',
+        desc: 'lorem ipsum',
+        status: 1
+      },
+      {
         index: 3,
         title: 'titulo 3',
         desc: 'lorem ipsum',
         status: 0
       },
+      {
+        index: 4,
+        title: 'titulo 4',
+        desc: 'lorem ipsum',
+        status: 0
+      },
       
-    ],
-    status: ['fazer','fazendo','aguardando','concluido']
+    ]
   },
   getters: {
     appName(state) {
@@ -37,16 +54,16 @@ const store = createStore({
       return state.status
     }
   },
-  // mutations: {
-  //   SET_CARD_STATUS(state, status){
-  //     state.cards.status = status;
-  //   }
-  // },
-  // actions: {
-  //   setStatus({ commit }, newValue) {
-  //     commit("SET_CARD_STATUS", newValue)
-  //   }
-  // }
+  mutations: {
+    SET_CARD_STATUS(state, status){
+      state.cards.status = status;
+    }
+  },
+  actions: {
+    setStatus({ commit }, newValue) {
+      commit("SET_CARD_STATUS", newValue)
+    }
+  }
 })
 
 export default store
