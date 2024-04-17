@@ -36,7 +36,17 @@ const store = createStore({
     status(state) {
       return state.status
     }
-  }
+  },
+  // mutations: {
+  //   SET_CARD_STATUS(state, status){
+  //     state.cards.status = status;
+  //   }
+  // },
+  // actions: {
+  //   setStatus({ commit }, newValue) {
+  //     commit("SET_CARD_STATUS", newValue)
+  //   }
+  // }
 })
 
 export default store
