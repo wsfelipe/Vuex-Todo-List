@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      a: this.$store.getters.cards.filter((c) => c.status==1)
+      a: this.$store.getters.cards.filter((c) => c.status==this.status)
     }
   }
 }
