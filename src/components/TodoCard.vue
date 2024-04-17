@@ -1,7 +1,8 @@
 <template>
   <div v-for="card in cards" v-bind:key="card.index" class="content-card">
     <div v-if="card.status == status">
-      <div class="card-title">
+      <div class="card">
+        <p>{{ card.title }}</p>
         <p>{{ card.title }}</p>
       </div>
     </div>
@@ -34,6 +35,12 @@ export default {
   font-size: 14px;
   border-radius: 4px;
   background: #aaa;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
 }
 
 </style>
