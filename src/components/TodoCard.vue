@@ -35,7 +35,14 @@ export default {
   font-size: 14px;
   border-radius: 4px;
   background: #aaa;
+  transition: .8s;
 }
+
+.content-card:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
 .card {
   display: flex;
   flex-direction: row;

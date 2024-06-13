@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 
 const store = createStore({
+  namespaced: true,
   state: {
     appName: 'Vuex To Do List',
     cards: [
