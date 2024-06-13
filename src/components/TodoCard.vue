@@ -2,15 +2,27 @@
   <div v-for="card in cardlist" v-bind:key="card.index" class="content-card">
     <div v-if="card.status == status">
       <div class="card">
+        <img
+          v-if="this.status !== 0"
+          class="arrows"
+          src="../assets/left-arrow.png"
+          @click="this.backward(card.id)"
+        >
         <p>{{ card.title }}</p>
         <p>{{ card.title }}</p>
+        <img 
+          v-if="this.status !== 3"
+          class="arrows"
+          src="../assets/right-arrow.png"
+          @click="this.forward(card.id)"
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'TodoCard',
@@ -20,15 +32,22 @@ export default {
       default: 0
     }
   },
+  methods: {
+    ...mapActions('cards', {
+      backward: 'backward',
+      forward: 'forward'
+    })
+  },
   computed: {
     ...mapGetters('cards', {
       cards: 'cards'
     }),
     cardlist: function() {
       return this.cards.filter((card) => {
+        console.log(this.status)
         return card.status == this.status
       })
-    }
+    },
   },
 }
 </script>
@@ -53,8 +72,21 @@ export default {
 .card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
+  align-items: center;
+}
+
+.arrows {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  border-radius: 100%;
+  transition: .6s;
+}
+
+.arrows:hover {
+  background-color: #aaa;
 }
 
 </style>
