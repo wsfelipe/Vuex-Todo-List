@@ -1,14 +1,21 @@
 <template>
   <div class="home">
     <h1>
-      {{ this.$store.getters.appName }}
+      {{ appName }}
     </h1>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
-  name: 'BodyTitle'
+  name: 'BodyTitle',
+  computed: {
+    ...mapGetters('appinfos', {
+      appName: 'appName'
+    })
+  }
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div v-for="card in cards" v-bind:key="card.index" class="content-card">
+  <div v-for="card in cardlist" v-bind:key="card.index" class="content-card">
     <div v-if="card.status == status">
       <div class="card">
         <p>{{ card.title }}</p>
@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'TodoCard',
   props: {
@@ -18,11 +20,16 @@ export default {
       default: 0
     }
   },
-  data() {
-    return {
-      cards: this.$store.getters.cards.filter((c) => c.status==this.status)
+  computed: {
+    ...mapGetters('cards', {
+      cards: 'cards'
+    }),
+    cardlist: function() {
+      return this.cards.filter((card) => {
+        return card.status == this.status
+      })
     }
-  }
+  },
 }
 </script>
 
