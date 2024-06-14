@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### About
+This project was realized to improve knowledge in vue store, with state, getters, actions and mutations.
