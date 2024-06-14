@@ -9,7 +9,6 @@
           @click="this.backward(card.id)"
         >
         <p>{{ card.title }}</p>
-        <p>{{ card.title }}</p>
         <img 
           v-if="this.status !== 3"
           class="arrows"
