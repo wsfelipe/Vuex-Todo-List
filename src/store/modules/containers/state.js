@@ -2,19 +2,19 @@ export default {
   containers: [
     {
       title: 'To Do',
-      status: 1
+      status: 0
     },
     {
       title: 'Doing',
-      status: 2
+      status: 1
     },
     {
       title: 'Waiting Third Party',
-      status: 3
+      status: 2
     },
     {
       title: 'Done',
-      status: 4
+      status: 3
     }
   ]
 }
