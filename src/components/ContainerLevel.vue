@@ -33,7 +33,7 @@ export default {
 .content-level {
   background: #555;
   border-radius: 8px;
-  box-shadow: #222 2px 2px 2px 2px;
+  box-shadow: #222 4px 2px 4px 2px;
   margin: 20px;
   width: 100%;
   padding: 10px;
@@ -43,5 +43,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+h3 {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
 }
 </style>
