@@ -36,4 +36,10 @@ export default {
   gap: 10px;
   background: #333;
 }
+
+@media (max-width: 900px) {
+  .content-list {
+    flex-direction: column;
+  }
+}
 </style>
